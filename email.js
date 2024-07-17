@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
 const sendMail = async (to, subject, text, html) => {
   try {
     let info = await transporter.sendMail({
-      from: `"Nome do Remetente" <${process.env.EMAIL_USER}>`, // sender address
+      from: `"Nome do Remetente: " <${process.env.EMAIL_USER}>`, // sender address
       to: to, // list of receivers
       subject: subject, // Subject line
       text: text, // plain text body
